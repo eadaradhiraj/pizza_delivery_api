@@ -1,4 +1,3 @@
-from msilib import schema
 from pydantic import BaseModel
 from typing import Optional
 
@@ -31,7 +30,7 @@ class LoginModel(BaseModel):
     password:str
 
 class OrderModel(BaseModel):
-    id=Optional[int]
+    id:Optional[int]
     quantity:int
     order_status:Optional[str]="PENDING"
     pizza_size: Optional[str]="SMALL"

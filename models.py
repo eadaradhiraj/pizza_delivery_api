@@ -1,4 +1,4 @@
-from database import Base
+from database import Base, engine
 from sqlalchemy import (
     Integer,
     Boolean,
@@ -54,3 +54,5 @@ class Order(Base):
     def __repr__(self):
         return f"<Order {self.id}>"
 
+if __name__ == '__main__':
+    Base.metadata.create_all(engine)

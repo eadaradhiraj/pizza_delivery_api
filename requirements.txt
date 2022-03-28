@@ -3,3 +3,4 @@ sqlalchemy
 sqlalchemy_utils
 fastapi_jwt_auth
 werkzeug
+uvicorn

@@ -1,5 +1,4 @@
 
-from os import access
 from fastapi import APIRouter, Depends, status
 from fastapi.exceptions import HTTPException
 from database import Session, engine
