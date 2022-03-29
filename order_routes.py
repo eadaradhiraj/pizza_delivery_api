@@ -43,6 +43,7 @@ async def place_an_order(order:OrderModel, Authorize:AuthJWT=Depends()):
     )
     new_order.user = user
     session.add(new_order)
+    session.commit()
     response = {
         "pizza_size": new_order.pizza_size,
         "quantity": new_order.quantity,
