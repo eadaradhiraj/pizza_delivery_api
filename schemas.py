@@ -1,3 +1,4 @@
+from msilib import schema
 from pydantic import BaseModel
 from typing import Optional
 
@@ -42,5 +43,15 @@ class OrderModel(BaseModel):
             "example": {
                 "quantity": 2,
                 "pizza_size": "LARGE",
+            }
+        }
+
+class OrderStatusModel(BaseModel):
+    order_status: Optional[str]="PENDING"
+    class Config:
+        orm_mode = True
+        schema_extra = {
+            "example": {
+                "order_status": "PENDING"
             }
         }
